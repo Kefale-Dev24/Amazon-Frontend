@@ -1,18 +1,19 @@
-import { useState } from 'react'
+import { useState } from "react";
 
-import './App.css'
-import Header from './Components/Header/Header'
-
+import "./App.css";
+import Header from "./Components/Header/Header";
+import Carousel from "./Components/Carousel/CarouselEffect";
+import CarouselEffect from "./Components/Carousel/CarouselEffect";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
-    <Header/>
-
+      <Header />
+      <CarouselEffect />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
