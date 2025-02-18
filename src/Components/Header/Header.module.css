@@ -44,9 +44,9 @@
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 100%;
-    flex: 1;
+    /* flex: 1; */
   }
   .search select,
   .search input {
@@ -65,8 +65,9 @@
     /* border: none; */
   }
   .search svg {
-    padding: 7px;
+    padding: 1px;
     background: #febd69;
+
     color: #1a1a1a;
   }
   .search svg:hover {
