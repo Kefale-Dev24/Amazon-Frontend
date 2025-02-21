@@ -5,7 +5,6 @@
     color: black;
     text-decoration: none;
     position: relative;
-    font-size: 12px;
    
   }
   .card__container:hover .button{
@@ -15,7 +14,7 @@
   .card__container img {
     padding: 10px;
     width: 100%;
-    height: 150px;
+    height: 200px;
     object-fit: contain;
   }
   .button {
@@ -44,9 +43,9 @@
   .products_container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    max-width: 800px;
+    max-width: 1450px;
     margin: 100px auto 100px auto;
-    gap: 20px;
+    gap: 50px;
     justify-items: center;
   }
   .products_container section {
