@@ -1,10 +1,13 @@
 {
+  "homepage": "https://github.com/Kefale-Dev24/Amazon-Frontend/",
   "name": "amazon-clone",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -15,6 +18,7 @@
     "@mui/material": "^6.4.6",
     "auth": "^1.2.3",
     "firebase": "^11.3.1",
+    "gh-pages": "^6.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.4.0",
