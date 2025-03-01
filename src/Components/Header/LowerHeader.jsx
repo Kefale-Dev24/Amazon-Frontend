@@ -1,5 +1,5 @@
 import React from "react";
-import { FiMenu } from "react-icons/fi";
+// import { FiMenu } from "react-icons/fi";
 import { AiOutlineMenu } from "react-icons/ai";
 import classes from "./Header.module.css";
 function LowerHeader() {
