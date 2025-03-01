@@ -3,16 +3,15 @@ import Rating from "@mui/material/Rating";
 import CurrencyFormat from "../CurrencyFormat/CurrencyFormat";
 import classes from "./Product.module.css";
 import { Link } from "react-router-dom";
-// import {Link, useNavigate} from 'react-router-dom'
-// import { DataContext } from "../DataProvider/DataProvider";
-// import { Type } from "../../Utility/action.type";
+import { Type } from "../../Utility/action.type";
+import { DataContext } from "../DataProvider/DataProvider";
 
 function ProductCard({ product, flex, renderDesc, renderAdd }) {
-  // function ProductCard({ product, flex, renderDesc, renderAdd }) {
   // navigate=useNavigate();
   const { image, title, id, rating, price, description } = product;
   // console.log(  product)
-  //   const [state, dispatch] = useContext(DataContext);
+  const [state, dispatch] = useContext(DataContext);
+  // console.log(state)
 
   // const handleRoute=()=>{
   //   navigate(`/products/${id}`)
@@ -44,14 +43,14 @@ function ProductCard({ product, flex, renderDesc, renderAdd }) {
       <div>
         <h3>{title}</h3>
         {/* {renderDesc && <div>{description}</div>} */}
-        {renderDesc && <div style={{ maxWidth: "750px" }}>{description}</div>}
+        {renderDesc && <div style={{ maxWidth: "500px" }}>{description}</div>}
         <div className={classes.rating}>
           {/* rating */}
           <Rating value={rating?.rate} precision={0.1} />
           {/*count  */}
           <small>{rating?.count}</small>
         </div>
-        <div>
+        <div className={classes.price}>
           {/* price */}
           <CurrencyFormat amount={price} />
         </div>
@@ -59,7 +58,7 @@ function ProductCard({ product, flex, renderDesc, renderAdd }) {
         {/* <button className={classes.button} onClick={addToCart}>
           add to cart
         </button> */}
-
+        <br /> <br />
         {renderAdd && (
           <button className={classes.button} onClick={addToCart}>
             add to cart

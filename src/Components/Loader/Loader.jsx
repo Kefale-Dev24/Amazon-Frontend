@@ -1,7 +1,7 @@
 import React from 'react'
 import { FadeLoader } from 'react-spinners'
 // import { CircleLoader } from "react-spinners";
-// import {PulseLoader} from 'react-spinners'
+
 
 function Loader() {
   return (
@@ -15,7 +15,7 @@ function Loader() {
     >
       <FadeLoader color="#36d7b7" />
       {/* <CircleLoader color="#36d7b7" /> */}
-      {/* <PulseLoader /> */}
+    
     </div>
   );
 }

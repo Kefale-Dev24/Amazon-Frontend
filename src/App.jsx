@@ -1,10 +1,13 @@
-import { useState } from "react";
+import React,{ useState } from "react";
 
 import "./App.css";
 import Routing from "./Router";
 
 function App() {
-  return(  <Routing />)
+  return (
+    
+    <Routing />
+  )
 
 
 }

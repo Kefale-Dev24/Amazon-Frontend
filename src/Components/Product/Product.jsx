@@ -19,7 +19,7 @@ function Product() {
       .catch((err) => {
         console.log(err);
         setIsLoading(false);
-        isLoading(false); //isloading is not a function
+        // isLoading(false); isLoading is not a function 
       });
   }, []);
 
