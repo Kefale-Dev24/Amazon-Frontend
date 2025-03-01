@@ -8,6 +8,7 @@ import { initialState, reducer } from "./Utility/reducer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
+
   <React.StrictMode>
     <DataProvider reducer={reducer} initialState={initialState}>
       <App />
