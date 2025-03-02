@@ -10,14 +10,14 @@ import ProductDetail from './Pages/ProductDetail/ProductDetail'
 
 function Routing() {
   return (
-    <Router>
+    <Router basename="/Amazon-Frontend-Clone-2025">
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/auth" element={<Auth />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/orders" element={<Orders />} />
         <Route path="/category/:categoryName" element={<Results />} />
-        <Route path="/products/:productId" element={<ProductDetail/>} />
+        <Route path="/products/:productId" element={<ProductDetail />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
     </Router>
