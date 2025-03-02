@@ -13,6 +13,7 @@ function Results() {
     axois.get(`${productUrl}/products/category/${categoryName}`)
       .then((res) => {
         setResults(res.data);
+        // setLoading(false)
         console.log(categoryName);
       })
       .catch((err) => {
