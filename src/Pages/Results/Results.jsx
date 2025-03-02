@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import {useState,useEffect} from 'react'
 import classes from './Results.module.css'
 import LayOut from '../../Components/LayOut/LayOut'
 import { useParams } from 'react-router-dom';
@@ -11,14 +11,13 @@ function Results() {
   const { categoryName } = useParams();
   useEffect(() => {
     axois.get(`${productUrl}/products/category/${categoryName}`)
-      .then((res) => {
-        setResults(res.data);
-        // setLoading(false)
-        console.log(categoryName);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+        .then((res) => {
+          setResults(res.data);
+          console.log(categoryName);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
   }, []);
   {
   }
