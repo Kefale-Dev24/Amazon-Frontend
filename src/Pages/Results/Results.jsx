@@ -10,14 +10,15 @@ function Results() {
   const [results, setResults] = useState([]);
   const { categoryName } = useParams();
   useEffect(() => {
-    axois.get(`${productUrl}/products/category/${categoryName}`)
-        .then((res) => {
-          setResults(res.data);
-          console.log(categoryName);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+    axois
+      .get(`${productUrl}/products/category/${categoryName}`)
+      .then((res) => {
+        setResults(res.data);
+        console.log(categoryName);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
   {
   }

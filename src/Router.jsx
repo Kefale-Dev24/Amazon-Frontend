@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Landing from "./Pages/Landing/Landing";
 import Auth from "./Pages/Auth/Auth";
 import Payment from "./Pages/Payment/Payment";
@@ -10,7 +11,8 @@ import ProductDetail from './Pages/ProductDetail/ProductDetail'
 
 function Routing() {
   return (
-    <Router basename="/Amazon-Frontend-Clone-2025">
+    // <Router basename="/Amazon-Frontend-Clone-2025"> //this works in the case of BrowserRouter
+    <Router>
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/auth" element={<Auth />} />
