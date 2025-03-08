@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 import { categoryInfos } from "./catagoryFullInfos";
-import CategoryCard from './CategoryCard';
+import CategoryCard from "./CategoryCard";
 import classes from "./Category.module.css";
 
-function Catagory() {
+function Category() {
   return (
     <section className={classes.category__container}>
       {categoryInfos?.map((infos) => (
@@ -14,4 +14,4 @@ function Catagory() {
   );
 }
 
-export default Catagory
+export default Category;
