@@ -7,6 +7,7 @@ import LowerHeader from "./LowerHeader";
 import { BiCart } from "react-icons/bi";
 // import { AddShoppingCartIcon } from "@mui/icons-material/AddShoppingCart";
 import { DataContext } from "../DataProvider/DataProvider";
+import { auth } from "../../Utility/firebase";
 
 const Header = () => {
   const [{ basket, user }, dispatch] = useContext(DataContext);
@@ -58,9 +59,23 @@ const Header = () => {
             </Link>
 
             {/* // */}
-            <Link to="/auth">
-              <p>Sign In</p>
-              <span>Account & Lists</span>
+            <Link to={!user && "/auth"}>
+              <div>
+                {user ? (
+                  <>
+                    <p>Hello {user?.email?.split("@")[0]}</p>
+                    <span onClick={() => (user ? auth.signOut() : null)}>
+                      Sign Out
+                    </span>
+                  </>
+                ) : (
+                  <>
+                    <p>Hello, Sign In</p>
+                    <span>Account & Lists</span>
+                  </>
+                )}
+              </div>
+              {/* <span>Account & Lists</span> */}
             </Link>
 
             <Link to="/orders">

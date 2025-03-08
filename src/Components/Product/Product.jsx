@@ -14,7 +14,6 @@ function Product() {
       .then((res) => {
         console.log(res);
         setProducts(res.data);
-        // setResults(res.data);
         setIsLoading(false);
       })
       .catch((err) => {

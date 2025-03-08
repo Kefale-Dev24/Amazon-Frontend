@@ -54,16 +54,18 @@ function ProductCard({ product, flex, renderDesc, renderAdd }) {
           {/* price */}
           <CurrencyFormat amount={price} />
         </div>
-
-        {/* <button className={classes.button} onClick={addToCart}>
-          add to cart
-        </button> */}
         <br /> <br />
         {renderAdd && (
           <button className={classes.button} onClick={addToCart}>
             add to cart
           </button>
         )}
+         {/* {
+          !(renderAdd) && 
+          <button className={classes.button} onClick={addToCart}>
+            add to cart
+          </button>
+        }  //uses to hide the add to card button */}
       </div>
     </div>
   );

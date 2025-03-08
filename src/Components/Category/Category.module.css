@@ -19,7 +19,6 @@
   font-size: 20px;
   align-items: center;
   justify-content: center;
-  
 }
 .category h2,
 .category p {
@@ -34,14 +33,10 @@
 .category__container {
   position: relative;
   margin-top: -10%;
-  Padding-bottom: 5px;
+  padding-bottom: 5px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-template-columns: repeat(4, 1fr);
-  /* max-width: 10px;  */
   gap: 10px;
-  /* margin-right: auto;
-  margin-left: auto; */
   place-items: center;
 }
 .category__container {
@@ -49,4 +44,14 @@
 }
 .category__container::-webkit-scrollbar {
   display: none;
+}
+
+@media screen and (max-width: 576px) {
+  .category__container {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    max-width: 1600px;
+    gap: 50px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }

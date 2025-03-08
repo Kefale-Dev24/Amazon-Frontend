@@ -1,4 +1,5 @@
-export const categoryInfos = [
+export const categoryInfos =
+  [
   {
     title: "Electronics",
     name: "electronics",
