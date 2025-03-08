@@ -156,6 +156,3 @@ function Auth() {
 }
 
 export default Auth;
-
-// pk_test_51QzHidR0KAhqShitxXfrGHcb4PQxGHSfFWhjECHkyjEFQ8A2epZUeZBJ5yMR1FL6Mz4TnVWcL7Zt5nafKvRwj49g00QX2GOYBM;
-// sk_test_51QzHidR0KAhqShitJ91LhQSnDEAwfj7UaiGvoyEJwWPlVLHoeFJo493CxMSKrbKLIMOXkhWtVHsXI1mcuRcVH7Kg00PMInsOxQ;
