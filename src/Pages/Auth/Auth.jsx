@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import classes from "./SignUp.module.css";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { auth } from "../../Utility/firebase";
@@ -12,8 +12,18 @@ import { Type } from "../../Utility/action.type";
 import LayOut from "../../Components/LayOut/LayOut";
 
 function Auth() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
+  const [email, setEmail] = useState(sessionStorage.getItem("email") || "");
+  const [password, setPassword] = useState(
+    sessionStorage.getItem("password") || ""
+  );
+
+  useEffect(() => {
+    sessionStorage.setItem("email", email);
+    sessionStorage.setItem("password", password);
+  }, [email, password]);
+
   const [error, setError] = useState("");
   const [loading, setLoading] = useState({
     signIn: false,
